@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<h1>JSON Parser</h1>
+
+<div>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <table>
+            <tr><td>File to parse:</td><td><input type="file" name="file" /></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
+
+<div>
+    <ul>
+        <li th:each="file : ${files}">
+            <a th:href="${file}" th:text="${file}"></a>
+        </li>
+    </ul>
+</div>
+
+<div th:if="${response}">
+    <h3 th:text="${response}"></h3>
+</div>
+
+<div th:if="${student}">
+    <div>
+        <p>Id: <span th:text="${student.getId()}"></span></p>
+        <p>Forename: <span th:text="${student.getForename()}"></span></p>
+        <p>Surname: <span th:text="${student.getSurname()}"></span></p>
+        <p>Full Time: <span th:text="${student.getFullTime()}"></span></p>
+    </div>
+
+    <br/>
+    <div>
+        <p><b>Address</b></p>
+        <p>Street: <span th:text="${student.getAddress().getStreet()}"></span></p>
+        <p>City: <span th:text="${student.getAddress().getCity()}"></span></p>
+        <p>PostCode: <span th:text="${student.getAddress().getPostcode()}"></span></p>
+    </div>
+    <br/>
+
+    <div>
+        <br/>
+        <p><b>Modules</b></p>
+
+        <div th:each="module : ${student.getModules()}">
+            <p>Code: <span th:text="${module.getCode()}"></span></p>
+            <p>Name: <span th:text="${module.getName()}"></span></p>
+
+            <p><b>Assessments</b></p>
+            <div th:each="assessment : ${module.getAssessments()}">
+                <p>TYPE: <span th:text="${assessment.getType()}"></span></p>
+                <p>Name: <span th:text="${assessment.getName()}"></span></p>
+                <p>Mark: <span th:text="${assessment.getMark()}"></span></p>
+            </div>
+            <br/>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

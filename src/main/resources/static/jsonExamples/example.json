@@ -1,0 +1,70 @@
+{
+  "id": 12345,
+  "forename": "Bradley",
+  "surname": "Miles",
+  "fullTime": true,
+  "address": {
+    "street": "23 Dennis Road",
+    "city": "Bristol",
+    "postcode": "BS6 6FE"
+  },
+  "modules": [
+    {
+      "code": "COMS20805",
+      "name": "Software Product Engineering",
+      "assessments": [
+        {
+          "type": "COURSEWORK",
+          "name": "Profile",
+          "mark": 100
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "Vision",
+          "mark": 100
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "Demo",
+          "mark": 100
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "M4",
+          "mark": 100
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "M4b",
+          "mark": 100
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "M5",
+          "mark": 80
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "M6",
+          "mark": null
+        },
+        {
+          "type": "COURSEWORK",
+          "name": "M7",
+          "mark": null
+        }
+      ]
+    },
+    {
+      "code": "COMS21103",
+      "name": "Data Structures & Algorithms",
+      "assessments": [
+        {
+          "type": "EXAM",
+          "name": "Exam",
+          "mark": 55
+        }
+      ]
+    }
+  ]
+}
