@@ -2,6 +2,9 @@ package com.htisolutions.jsonparser.models;
 
 import java.util.List;
 
+/**
+ * A model to represent a single student
+ */
 public class Student {
 
     private Integer id;

@@ -1,5 +1,8 @@
 package com.htisolutions.jsonparser.models;
 
+/**
+ * A model to represent a single assessment
+ */
 public class Assessment {
 
     private enum TYPE {EXAM, COURSEWORK}

@@ -28,9 +28,13 @@ public class JsonParserController {
         String response = "Whoops: Something went wrong..";
 
         try {
+            // get bytes from json file
             byte[] jsonData = file.getBytes();
 
+            // create ObjectMapper instance
             ObjectMapper objectMapper = new ObjectMapper();
+
+            // convert JSON string to POJO
             Student student = objectMapper.readValue(jsonData, Student.class);
 
             response = String.format("You successfully parsed: Student (%s %s)", student.getForename(), student.getSurname());

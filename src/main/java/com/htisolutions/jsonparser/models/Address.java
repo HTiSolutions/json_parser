@@ -1,5 +1,8 @@
 package com.htisolutions.jsonparser.models;
 
+/**
+ * A model to represent a single address
+ */
 public class Address {
 
     private String street;
