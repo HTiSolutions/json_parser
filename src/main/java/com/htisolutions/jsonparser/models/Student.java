@@ -17,7 +17,6 @@ public class Student {
     public Integer getId() {
         return id;
     }
-
     public void setId(Integer id) {
         this.id = id;
     }
@@ -25,7 +24,6 @@ public class Student {
     public String getForename() {
         return this.forename;
     }
-
     public void setForename(String forename) {
         this.forename = forename;
     }
@@ -43,6 +41,7 @@ public class Student {
     public void setFullTime(Boolean fullTime) {
         this.fullTime = fullTime;
     }
+
     public Address getAddress() {
         return address;
     }
@@ -53,7 +52,6 @@ public class Student {
     public List<Module> getModules() {
         return this.modules;
     }
-
     public void setModules(List<Module> modules) {
         this.modules = modules;
     }
